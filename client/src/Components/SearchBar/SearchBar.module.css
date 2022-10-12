@@ -1,0 +1,43 @@
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    height: 2rem;
+    width: 10rem;
+    padding-inline: 1rem;
+    margin: 3rem 0rem 3rem 1rem;
+    font-family: 'Monaco';
+    font-size:large;
+    border-radius: 15px;
+    border: solid 2px #d1495b;
+    background-color: #fcd5ce;
+    color: black;
+    font-weight: bold ;
+    cursor: pointer;
+}
+
+.input::placeholder {
+    color: rgba(119, 34, 34, 0.884);
+}
+
+.button {
+    height: 2.5rem;
+    width: 9rem;
+    margin: 3rem 1rem 3rem 1rem;
+    font-family: 'Monaco';
+    font-size:large;
+    border-radius: 15px;
+    border: solid 2px #d1495b;
+    background-color: #fcd5ce;
+    color: black;
+    font-weight: bold ;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ca4859a1;
+}

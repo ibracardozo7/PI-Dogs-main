@@ -1,0 +1,29 @@
+.container {
+    background-image: url(../../Img/LandingPage.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.botton {
+    width: 10rem;
+    height: 5rem;
+    /* margin: 1rem 1rem; */
+    font-family: 'Courier New';
+    font-size:xx-large;
+    font-weight: 530;
+    border-radius: 20px;
+    cursor: pointer; 
+    position: fixed;
+    bottom: 6rem;
+    right: 25rem;
+    background-color: rgba(80, 41, 41, 0.788);
+    border: solid 5px rgb(71, 7, 7);
+    font-weight: bold;
+}
+
+.botton:hover {
+    background-color: rgba(58, 159, 190, 0.678);
+    border: solid 5px rgb(0, 255, 255);
+}

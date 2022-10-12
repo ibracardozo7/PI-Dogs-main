@@ -1,0 +1,31 @@
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin-top: 0.5rem;
+    margin-left: 0.7rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    border: solid 2px #1477b4;
+    /* background-color: #e9b3b3de; */
+    background-color: #a2d4ebde;
+    cursor: pointer;
+    /* list-Style: none; */
+    /* place-content: center; */
+    border-radius: 50%;
+    font-size: large;
+
+}
+
+.boton:hover {
+    /* background-color: #cc5a69c4; */
+    background-color: #43baffc4;
+    border: solid 3px #1477b4;
+
+}

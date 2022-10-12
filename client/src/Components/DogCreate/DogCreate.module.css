@@ -1,0 +1,218 @@
+.container {
+    background-image: url(../../Img/dogCreate.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    /* height: 100%; */
+    background-attachment: fixed;
+    display: flex;
+    /* flex-direction: column; */
+    align-content: center;
+    justify-content: center;
+}
+
+.containerDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 100%;
+    width: 40rem;
+    /* border: solid 3px black; */
+    margin: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+}
+
+.dogForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px black; */
+}
+
+.title {
+    font-family: 'Monaco';
+    font-weight: bold;
+    font-size: x-large;
+    margin: 0.5rem;
+    /* width: 15rem; */
+    color: #ffe8e8;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 5px;
+    /* border: solid 1px black; */
+ 
+}
+
+/* .div {
+    border: solid 1px black;
+} */
+
+.inputDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid 2px rgb(224, 110, 110); */
+    height: 3rem;
+    width: 30rem;
+    margin: 0.2rem;
+    border-radius: 15px;
+    /* background-color: rgb(135, 169, 219); */
+    border: solid 3px #1477b4;
+    background-color: #5fa3cade;
+    /* color: #1982c4; */
+}
+
+.label {
+    margin: 0.5rem 0 0 3rem;
+    width: 10rem;
+    height: 2rem;
+    text-align: left;
+    font-family: 'Monaco';
+    /* color: rgb(182, 43, 43); */
+    font-weight: bold;
+}
+
+.input {
+    width: 5rem;
+    height: 1.5rem;
+    margin: 1rem;
+    font-family: 'Monaco';
+    font-size: large;
+    padding-inline: 1rem;
+    border-radius: 10px;
+    border: solid 2px rgb(62, 147, 216);
+    background-color: rgba(184, 184, 184, 0.418);
+}
+
+.inputName {
+    width: 8rem;
+    height: 1.5rem;
+    margin: 1rem;
+    font-family: 'Monaco';
+    font-size: large;
+    padding-inline: 1rem;
+    border-radius: 10px;
+    border: solid 2px rgb(62, 147, 216);
+    background-color: rgba(184, 184, 184, 0.418);
+}
+
+.inputTempe {
+    width: 10rem;
+    height: 2rem;
+    margin: 1rem;
+    font-family: 'Monaco';
+    font-size: large;
+    padding-inline: 1rem;
+    border-radius: 10px;
+    border: solid 2px rgb(62, 147, 216);
+}
+
+.button {
+    width: 12rem;
+    height: 3rem;
+    margin: 1rem 1rem;
+    font-family: 'Monaco';
+    font-size: x-large;
+    border-radius: 15px;
+    cursor: pointer;
+    border: solid 3px #1477b4;
+    background-color: #5fa3cade;
+}
+
+.errors {
+    border: solid 2px  rgb(141, 21, 21);;
+    margin: 1rem;
+    width: 25rem;
+    height: 2.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(168, 61, 61, 0.8);
+    font-family: 'Monaco';
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight: 700;
+}
+
+.theOthers {
+    height: 100%;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 2rem 2rem 0 10rem;
+    align-items: center;
+    justify-content: center;
+    /* border: solid 1px red; */
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.labelSel {
+    /* margin: 0 0 0 0; */
+    width: 10rem;
+    height: 2rem;
+    text-align: center;
+    font-family: 'Monaco';
+    color: white;
+    /* color: rgb(216, 104, 104); */
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 2px;
+}
+
+.selectedTempe {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+
+.tempe {
+    text-transform: capitalize;
+    width: 7rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0 1rem 1.5rem 1rem;
+    border: solid 3px #1982c4;
+    background-color: #8fd8ee;
+    color: #1982c4;
+    font-family: 'Monaco';
+    font-weight: bold;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteButton {
+    margin: 0.5rem 0 2rem 0;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    border: solid 3px #1477b4;
+    background-color: #5fa3cade;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: red;
+    border: solid 1px white;
+}
+
+.placeholder {
+    text-transform: capitalize;
+    font-family: 'Monaco';
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+}
