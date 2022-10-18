@@ -6,7 +6,7 @@ import DogCard from "../DogCard/DogCard"
 import Paginado from "../Paginado/Paginado"
 import SearchBar from "../SearchBar/SearchBar";
 import style from "./Home.module.css"
-import loading from "../../Img/loading.gif"
+// import loading from "../../Img/loading.gif"
 
 
 export default function Home () {
@@ -14,7 +14,7 @@ export default function Home () {
 const dispatch = useDispatch()
 const allDogs = useSelector((state) => state.dogs)
 const allTemperaments = useSelector((state) => state.temperaments)
-// console.log("-->",allTemperaments)
+console.log("-->",allDogs)
 
 const [currentPage, setCurrentPage] = useState(1);
 const dogsPerPage = 8;
@@ -28,7 +28,8 @@ const paginado = (pageNumber) => {
 const [order, setOrder] = useState("")
 const [home, setHome] = useState(null)
 
-useEffect(() =>{
+
+useEffect(() => {
     dispatch(getTemperaments())
     dispatch(getDogs())
     .then((data) => {
@@ -37,10 +38,16 @@ useEffect(() =>{
     })
 },[])
 
-function handleClick (e){
-    e.preventDefault();
-    dispatch(getDogs())
-    // console.log("Ready")
+
+
+// function handleClick (e){
+//     e.preventDefault();
+//     dispatch(getDogs())
+//     // console.log("Ready")
+// }
+
+function loadAgain(){
+    window.location.reload()
 }
 
 function handleTemperament (e) {
@@ -69,23 +76,22 @@ function handleWeight (e) {
     setOrder(`Order ${e.target.value}`)
 }
 
-
 return (
-    <div className={style.containerMain} >
+    <div  >
         <div className={style.container} >
         <Link to="/dog">
-            <button className={style.botones} >Crear Dog</button>
+            <button className={style.botones}> <i className="fa-solid fa-plus"></i> Add Dog</button>
         </Link>
-        <button className={style.botones} onClick={handleClick} >Volver a cargar</button>
+        <button className={style.botones} onClick={loadAgain} >Volver a cargar</button>
         <div>
             <select className={style.botoneSelect} onChange={(e) =>{handleName(e)}} >
-                <option disabled selected defaultValue>Orden Name</option>
+                <option disabled selected defaultValue>Name...</option>
                 <option value="asc" >A - Z</option>
                 <option value="desc" >Z - A</option>
             </select>
 
             <select className={style.botoneSelect} onChange={(e) => {handleWeight(e)}} >
-                <option disabled selected defaultValue>Order Weight</option>
+                <option disabled selected defaultValue>Weight...</option>
                 <option value="min_weight" >Min</option>
                 <option value="max_weight" >Max</option>
             </select>
@@ -111,23 +117,24 @@ return (
                 <option value="created" >Craete</option>
             </select>
         </div>
-        <SearchBar />
+        <SearchBar setCurrentPage={setCurrentPage} />
         </div>
 
         {
             home ? 
             
-            <div>
-                <Paginado dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} />
-            <div className={style.allCards}>
-            {
+            <div className={style.containerMain} >
+                <Paginado currentPage={currentPage} setCurrentPage={setCurrentPage} dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado} />
+                
+              <div className={style.allCards}>
+              { 
                 currentDog?.map(e => {
                     return (
                         <DogCard key={e.id} id={e.id} name={e.name} image={e.image} temperament={e.temperament} weight={e.weight} />
                         )
                     })
-            }
-            </div>
+              }
+              </div>
             </div>
 
             :
@@ -138,6 +145,16 @@ return (
                     {/* <img src={loading1} alt="loading..." /> */}
             </div>
         }
+
+        <div className={style.footer}>
+            <div className={style.footerDiv}>
+                <h4 className={style.footerNameHenry}>Henry. 💛</h4>
+                <div className={style.botonFooter} ><i className="fa-brands fa-instagram"></i></div>
+                <div className={style.botonFooter} ><i className="fa-brands fa-github"></i></div>
+                <div className={style.botonFooter} ><i className="fa-brands fa-linkedin"></i></div>
+                <h4 className={style.footerName}>© Xavier Ibrahim Cardozo 2022.</h4>
+            </div>
+        </div>
 
     </div>
 )

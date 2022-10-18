@@ -1,10 +1,13 @@
 .containerMain {
-    background-image: url(../../Img/home.jpg);
+    background-image: url(../../Img/dogCreate.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     background-attachment: fixed;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    /* background-color: #e9e1e294; */
 }
 
 .container {
@@ -12,38 +15,46 @@
     justify-content: space-between;
     height: 4rem;
     /* width: 100%; */
-    /* background-color: rgb(233, 141, 141); */
+    background-color: #0e1929;
+    /* background-color: #d16d6d; */
+    padding-bottom: 0.3rem;
 }
 
 .botones {
     height: 2.5rem;
-    width: 10rem;
-    margin: 1rem 1rem 3rem 1rem;
+    /* width: 10rem; */
+    margin: 1rem 1rem 1rem 1rem;
+    padding-inline: 1rem;
     font-family: 'Monaco';
-    font-size:large;
+    font-size: 17px;
     border-radius: 15px;
-    border: solid 2.5px #d1495b;
-    background-color: #dbb9b3;
-    color: black;
+    /* border: solid 2.5px #ca4556; */
+    border: outset 3px rgba(0, 183, 255, 0.9);
+    background-color: #0e1a2ccc;
+    color: rgb(233, 230, 230);
     font-weight: bold ;
     cursor: pointer;
 }
 
 .botones:hover {
-    background-color: #d1495bd5;
+    background-color: rgba(9, 112, 247, 0.5);
+    box-shadow: 0px 1px 2px 0px rgba(0,132,255,0.7),
+            1px 2px 4px 0px rgba(0, 102, 255, 0.7),
+            2px 4px 8px 0px rgba(0, 110, 255, 0.7),
+            2px 4px 16px 0px rgba(0, 26, 255, 0.7);
 }
 
 .botoneSelect {
     height: 2.5rem;
-    width: 6rem;
+    /* width: 7rem; */
     padding-inline: 0.5rem;
     margin: 1rem 1rem 2.5rem 1rem;
     font-family: 'Monaco';
-    font-size:large;
+    font-size: 17px;
     border-radius: 15px;
-    border: solid 2px #d1495b;
-    background-color: #dbb9b3;
-    color: black;
+    border: outset 3px rgba(0, 183, 255, 0.9);
+    background-color: #0e1a2ccc;
+    color: whitesmoke;
     font-weight: bold ;
     cursor: pointer;
 }
@@ -65,4 +76,59 @@
     /* background-attachment: fixed; */
     /* border-radius: 100%; */
     /* background-color: rgba(228, 214, 223, 0.8); */
+}
+
+.paginado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginadoBoton {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin-top: 0.5rem;
+    margin-left: 0.7rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    border: solid 2.5px #1477b4;
+    background-color: rgb(190, 190, 190);
+    /* background-color: #a2d4ebde; */
+    cursor: pointer;
+    /* list-Style: none; */
+    /* place-content: center; */
+    border-radius: 50%;
+    font-size: large;
+}
+
+.footer {
+    height: 3.5rem;
+    background-color: #0e1929;
+}
+
+.footerDiv {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.botonFooter {
+    /* width: 3rem;
+    height: 3rem; */
+    font-size: xx-large;
+    /* padding: 0.5rem; */
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.footerName {
+    margin: 1.3rem 0.5rem 0 5rem;
+    color: whitesmoke;
+}
+
+.footerNameHenry {
+    margin: 1.3rem 7rem 0 0;
+    color: whitesmoke;
 }

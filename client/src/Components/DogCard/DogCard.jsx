@@ -4,15 +4,16 @@ import style from "./DogCard.module.css"
 
 export default function DogCard ({name, image, temperament, weight, id}) {
     // console.log({name, image, temperament, weight, id})
+
+    const tempe = temperament.join(" - ")
     return (
         <div className={style.container}>
             <h2 className={style.name}>{name}</h2>
-            <Link to={`/dog/${id}`} >
             <div>
-                <img className={style.image} src={image} />
+            <Link to={`/dog/${id}`} >
+                <img className={style.image} src={image} alt="img dog" />
+                </Link>
             </div>
-            </Link>
-            {/* <h3>{weight[0] + " - "+ weight[1]}</h3> */}
             <div className={style.temperaments}>
                 {/* {
                     temperament.map((e) => {
@@ -21,12 +22,16 @@ export default function DogCard ({name, image, temperament, weight, id}) {
                             )
                         }
                         )
-                } */}
+                    } */}
                 {/* <p>Temperament</p> */}
                 {
-                    temperament.join(" - ")
+                    
+                    temperament.length ? tempe : 
+                    <p>No tiene temperamentos</p> 
+                    
                 }
             </div>
+            <h4>{`Weight :  ${weight[0]} - ${weight[1]}  Kg`}</h4>
         </div>
     )
 }

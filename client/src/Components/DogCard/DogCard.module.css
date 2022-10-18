@@ -1,27 +1,41 @@
 .container {
-    background-color: rgba(219, 219, 219, 0.7);
-    height: 23.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(216, 210, 210, 0.95);
+    height: 25rem;
     width: 17rem;
     margin: 1rem;
     padding: 0.5rem;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0px 1px 2px 0px rgba(0,132,255,0.7),
+            1px 2px 4px 0px rgba(0, 102, 255, 0.7),
+            2px 4px 8px 0px rgba(0, 110, 255, 0.7),
+            2px 4px 16px 0px rgba(0, 26, 255, 0.7);
 }
 
 .container:hover {
-    border: solid 3px rgb(42, 125, 131);
-    background-color: rgba(158, 243, 243, 0.671);
+    outline: solid 3px rgba(0, 102, 255, 0.7);
+    background-color: rgba(117, 193, 255, 0.7);
+    /* color: whitesmoke; */
 }
 
 .name{
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
     text-transform: capitalize;
     /* color: rgb(0, 0, 0); */
     font-size:x-large;
+    /* color: #0e1929; */
 }
 
+/* .name:hover {
+    color: rgb(35, 39, 88);
+} */
+
 .image {
-    height: 11rem;
+    height: 10rem;
     width: 13.5rem;
     border-radius: 20px;
     /* padding-bottom: 0.5rem; */
@@ -33,12 +47,14 @@
     flex-wrap: wrap;
     justify-Content: center;
     align-items: center;
-    font-size: large;
+    font-size: 20px;
     margin-top: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color: rgba(146, 146, 146, 0.7);
+    background-color: rgba(202, 202, 202, 0.7);
     border-radius: 15px;
+    color: #0e1929;
+    font-weight: 500;
 }
 
 .tempe{
@@ -50,7 +66,7 @@
     margin-right: 15px;
     /* border: solid 3px #1982c4; */
     /* background-color: #8fd8ee; */
-    /* color: #1982c4; */
+    color: #1982c4;
     font-family: 'Monaco';
     font-weight: bold;
     /* border-radius: 15px; */

@@ -13,15 +13,19 @@ const alltempe = useSelector((state) => state.temperaments)
 function validate (input) {
     let errors = {};
 
+    if (input.name.trim().length === 0) errors.name = "Tu nueva raza no debe tener espacio"
+    
     if (!input.name) errors.name = "¡Tu nueva Raza debe tener un nombre!"
 
     if(!input.min_height || !input.max_height) errors.height = "Tu nueva Raza necesita una altura (Cm)"
 
-    if(input.min_height > input.max_height ) errors.height = "Tu Altura minima no puede ser mayor a la altura maxima"
+    if(parseInt(input.min_height) < 0 || parseInt(input.max_height) < 0) errors.height = "Tu nueva Raza no puede tener menos de 0 (Cm)"
+
+    if( parseInt(input.min_height) > parseInt(input.max_height) ) errors.height = "Tu Altura minima no puede ser mayor a la altura maxima"
 
     if(!input.min_weight || !input.max_weight) errors.weight = "Tu nueva Raza necesita un peso (Kg)"
 
-    if(input.min_weight > input.max_weight ) errors.weight = "Tu peso minimo no puede ser mayor al peso maximo"
+    if( parseInt(input.min_weight) > parseInt( input.max_weight) ) errors.weight = "Tu peso minimo no puede ser mayor al peso maximo"
 
     if(!input.life_span) errors.life_span = "Tu nueva Raza requiere una vida util"
 
@@ -43,15 +47,17 @@ const [errors, setErrors] = useState({
 })
 
 const [input, setInput] = useState({
-    name: null,
-    min_height: null,
-    max_height: null, 
-    min_weight : null,
-    max_weight : null,
-    life_span: null, 
-    image: null, 
+    name: "",
+    min_height: 0,
+    max_height: 0, 
+    min_weight : 0,
+    max_weight : 0,
+    life_span: 0, 
+    image: "", 
     temperament: []
 })
+
+console.log(input)
 
 useEffect(() => {
     dispatch(getTemperaments())
@@ -108,16 +114,16 @@ function handleSubmit (e) {
     e.preventDefault()
     dispatch(postDog(input))
     alert("Dog creado con Exitos!")
-    setInput({
-        name: null,
-        min_height: null,
-        max_height: null, 
-        min_weight : null,
-        max_weight : null,
-        life_span: null, 
-        image: null, 
-        temperament: []
-    })
+    // setInput({
+    //     name: null,
+    //     min_height: null,
+    //     max_height: null, 
+    //     min_weight : null,
+    //     max_weight : null,
+    //     life_span: null, 
+    //     image: null, 
+    //     temperament: []
+    // })
 }
 
 function loadAgain(){
@@ -142,7 +148,7 @@ return (
            <div className={style.inputDiv} >
             <label className={style.label} >Height</label>
             <label>Min</label>
-            <input className={style.input} type="number" value={input.min_height} name="min_height" min="1" onChange={(e) => {handleInput(e)}} />
+            <input className={style.input} type="number" value={input.min_height} name="min_height" min="1"  onChange={(e) => {handleInput(e)}} />
             <label>Max</label>
             <input className={style.input} type="number" value={input.max_height} name="max_height" min="1" onChange={(e) => {handleInput(e)}} />
            </div>
@@ -153,9 +159,9 @@ return (
            <div className={style.inputDiv}>
             <label className={style.label} >Weight</label>
             <label>Min</label>
-            <input className={style.input} type="number" value={input.min_weight} name="min_weight" min="1" onChange={(e) => {handleInput(e)}} />
+            <input className={style.input} type="number" value={input.min_weight} name="min_weight" min="1" max="98" onChange={(e) => {handleInput(e)}} />
             <label>Max</label>
-            <input className={style.input} type="number" value={input.max_weight} name="max_weight" min="1" onChange={(e) => {handleInput(e)}} />
+            <input className={style.input} type="number" value={input.max_weight} name="max_weight" min="1" max="99" onChange={(e) => {handleInput(e)}} />
            </div>
             { errors.weight && <p className={style.errors} >{errors.weight}</p> }
         </div>
@@ -163,7 +169,7 @@ return (
         <div>
            <div className={style.inputDiv} >
             <label className={style.label} >Life span</label>
-            <label> ej: 2-4(year)</label>
+            <label> ej: 3 (year)</label>
             <input className={style.input} type="number" value={input.life_span} name="life_span" min="1" onChange={(e) => {handleInput(e)}} />
            </div>
             { errors.life_span && <p className={style.errors} >{errors.life_span}</p> }
@@ -180,7 +186,7 @@ return (
         <div>
             <div className={style.inputDiv} >
             <label className={style.label} >All Temperaments</label>
-            <select className={style.inputTempe} onChange={handleSelect} >
+            <select className={style.inputTempe}  onChange={handleSelect} >
                 <option selected={true} disabled="disabled">Temperament</option>
                 {
                     alltempe?.map(e => (

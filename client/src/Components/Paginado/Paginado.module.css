@@ -9,23 +9,61 @@
     justify-content: center;
     align-items: center ;
     margin-top: 0.5rem;
+    margin-left: 0.6rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    /* border: solid 3px #176392; */
+    border: solid 3px rgba(0, 132, 255, 0.6);
+    background-color: #0e1b2e;
+    /* background-color: #a2d4ebde; */
+    cursor: pointer;
+    color: whitesmoke;
+    /* list-Style: none; */
+    /* place-content: center; */
+    border-radius: 50%;
+    font-size:16px;
+}
+
+.botonPage {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin-top: 0.5rem;
     margin-left: 0.7rem;
     height: 2.4rem;
     width: 2.4rem;
-    border: solid 2px #1477b4;
-    /* background-color: #e9b3b3de; */
-    background-color: #a2d4ebde;
+    /* border: solid 2.5px #1477b4; */
+    background-color: #0e1929;
+    /* background-color: #a2d4ebde; */
     cursor: pointer;
     /* list-Style: none; */
     /* place-content: center; */
     border-radius: 50%;
-    font-size: large;
-
+    font-size: 25px;
+    color: white ;
 }
 
 .boton:hover {
     /* background-color: #cc5a69c4; */
-    background-color: #43baffc4;
-    border: solid 3px #1477b4;
+    /* background-color: rgba(0, 102, 255, 0.418); */
+    color: whitesmoke;
+    border: solid 3px #1447b4;
+    font-size: 15px;
+    font-weight: 900;
+    box-shadow: 0px 1px 2px 0px rgba(0,132,255,0.7),
+            1px 2px 4px 0px rgba(0, 102, 255, 0.7),
+            2px 4px 8px 0px rgba(0, 110, 255, 0.7),
+            2px 4px 16px 0px rgba(0, 26, 255, 0.7);
+}
 
+.botonPage:hover {
+    /* background-color: #cc5a69c4; */
+    background-color: rgba(0, 102, 255, 0.8);
+    color: #0e1929;
+    border: solid 3px #1447b4;
+    font-size: 25px;
+    box-shadow: 0px 1px 2px 0px rgba(0,132,255,0.7),
+            1px 2px 4px 0px rgba(0, 102, 255, 0.7),
+            2px 4px 8px 0px rgba(0, 110, 255, 0.7),
+            2px 4px 16px 0px rgba(0, 26, 255, 0.7);
 }

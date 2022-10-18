@@ -63,10 +63,11 @@ export function getDetail (id) {
             console.log(json)
             return dispatch({
                 type: "GET_DETAIL",
-                payload: json.data[0]
+                payload: json.data
             })
         } catch (error) {
             console.log(error)
+            // alert("Dog no encontrado")
         }
     }
 }
@@ -96,5 +97,11 @@ export function sortByWeight (payload) {
     return {
         type: "SORT_BY_WEIGHT",
         payload
+    }
+}
+
+export function vaciarDetail () {
+    return {
+        type: "VACIAR_DETAIL",
     }
 }

@@ -17,13 +17,18 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.5rem;
     height: 100%;
     width: 40rem;
     /* border: solid 3px black; */
     margin: 2rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(3, 7, 12, 0.7); */
     border-radius: 30px;
+    box-shadow: 0px 1px 2px 0px rgba(0,132,255,0.7),
+            1px 2px 4px 0px rgba(0, 102, 255, 0.7),
+            2px 4px 8px 0px rgba(0, 110, 255, 0.7),
+            2px 4px 16px 0px rgba(0, 26, 255, 0.7);
 }
 
 .dogForm {
@@ -59,22 +64,26 @@
     /* border: solid 2px rgb(224, 110, 110); */
     height: 3rem;
     width: 30rem;
-    margin: 0.2rem;
+    margin: 0.25rem;
     border-radius: 15px;
+    padding: 0.2rem 0 0.2rem 0;
     /* background-color: rgb(135, 169, 219); */
-    border: solid 3px #1477b4;
-    background-color: #5fa3cade;
+    /* border: outset 3px #1477b4; */
+    border: outset 3px rgba(0, 89, 255, 0.7);
+    /* background-color: #5fa3cade; */
+    background-color: rgba(110, 178, 255, 0.7);
     /* color: #1982c4; */
 }
 
 .label {
-    margin: 0.5rem 0 0 3rem;
-    width: 10rem;
+    margin: 0.7rem 0 0 2rem;
+    width: 10.5rem;
     height: 2rem;
     text-align: left;
     font-family: 'Monaco';
     /* color: rgb(182, 43, 43); */
     font-weight: bold;
+    font-size: large;
 }
 
 .input {
@@ -85,7 +94,7 @@
     font-size: large;
     padding-inline: 1rem;
     border-radius: 10px;
-    border: solid 2px rgb(62, 147, 216);
+    border: inset 3px rgba(0, 102, 255, 0.7);
     background-color: rgba(184, 184, 184, 0.418);
 }
 
@@ -97,9 +106,14 @@
     font-size: large;
     padding-inline: 1rem;
     border-radius: 10px;
-    border: solid 2px rgb(62, 147, 216);
+    border: inset 3px rgba(0, 102, 255, 0.7);
     background-color: rgba(184, 184, 184, 0.418);
 }
+
+/* ::placeholder {
+    border: solid 2px rgb(62, 147, 216);
+    background-color: rgba(184, 184, 184, 0.418);
+} */
 
 .inputTempe {
     width: 10rem;
@@ -109,7 +123,8 @@
     font-size: large;
     padding-inline: 1rem;
     border-radius: 10px;
-    border: solid 2px rgb(62, 147, 216);
+    border: inset 3px rgba(0, 102, 255, 0.7);
+    background-color: rgba(184, 184, 184, 0.418);
 }
 
 .button {
@@ -120,24 +135,24 @@
     font-size: x-large;
     border-radius: 15px;
     cursor: pointer;
-    border: solid 3px #1477b4;
+    border: outset 3px rgba(0, 102, 255, 0.7);
     background-color: #5fa3cade;
 }
 
 .errors {
-    border: solid 2px  rgb(141, 21, 21);;
-    margin: 1rem;
-    width: 25rem;
+    border: outset 3px  rgba(255, 40, 40, 0.8);;
+    margin: 1rem 2.3rem;
+    width: 26rem;
     height: 2.5rem;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(168, 61, 61, 0.8);
+    background-color: rgba(206, 75, 75, 0.7);
     font-family: 'Monaco';
     color: rgb(255, 255, 255);
     font-size: large;
-    font-weight: 700;
+    font-weight: 750;
 }
 
 .theOthers {
@@ -151,7 +166,7 @@
     justify-content: center;
     /* border: solid 1px red; */
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .labelSel {
@@ -179,9 +194,9 @@
     width: 7rem;
     padding: 0.3rem 0.6rem;
     margin: 0 1rem 1.5rem 1rem;
-    border: solid 3px #1982c4;
-    background-color: #8fd8ee;
-    color: #1982c4;
+    border: inset 3px rgba(0, 102, 255, 0.7);
+    background-color: #5fa3cade;
+    /* color: #1982c4; */
     font-family: 'Monaco';
     font-weight: bold;
     border-radius: 15px;
@@ -198,7 +213,7 @@
     color: white;
     font-weight: bold;
     font-size: larger;
-    border: solid 3px #1477b4;
+    border: solid 3px rgba(0, 102, 255, 0.7);
     background-color: #5fa3cade;
     cursor: pointer;
 }

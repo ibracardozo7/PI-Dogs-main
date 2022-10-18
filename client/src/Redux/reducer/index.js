@@ -37,6 +37,12 @@ function rootReducer (state = initialState, action) {
                 ...state,
                 detail: action.payload
             }
+        
+        case "VACIAR_DETAIL" :
+            return {
+                ...state,
+                detail: {}
+            }
 
         case "FILTER_BY_TEMPERAMENTS":
             const allTempe = state.allDogs

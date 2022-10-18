@@ -165,3 +165,25 @@
     /* border-radius: 100%; */
     /* background-color: rgba(228, 214, 223, 0.8); */
 }
+
+.dog {
+    background-image: url(../../Img/home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 89.8vh;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dogname {
+    background-color: rgba(37, 157, 255, 0.8);
+    border: solid 3px rgb(0, 110, 255,0.9);
+    padding: 1rem;
+    width: 25rem;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 25px;
+}
