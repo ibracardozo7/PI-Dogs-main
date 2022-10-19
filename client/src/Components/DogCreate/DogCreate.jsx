@@ -189,9 +189,12 @@ return (
             <select className={style.inputTempe}  onChange={handleSelect} >
                 <option selected={true} disabled="disabled">Temperament</option>
                 {
-                    alltempe?.map(e => (
-                        <option key={e.id} value={e.name} >{e.name}</option>
-                        ))
+                        alltempe?.map(e => {
+                            if (e.name) {
+                                return <option value={e.name} key={e.id} >{e.name}</option>    
+                            } 
+                         
+                        })
                     }
             </select>
             </div>

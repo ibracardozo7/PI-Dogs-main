@@ -149,9 +149,15 @@ return (
         <div className={style.footer}>
             <div className={style.footerDiv}>
                 <h4 className={style.footerNameHenry}>Henry. 💛</h4>
-                <div className={style.botonFooter} ><i className="fa-brands fa-instagram"></i></div>
-                <div className={style.botonFooter} ><i className="fa-brands fa-github"></i></div>
-                <div className={style.botonFooter} ><i className="fa-brands fa-linkedin"></i></div>
+                <a href="https://www.instagram.com/ibracardozo7/" target="_blank" >
+                    <div className={style.botonFooter} ><i className="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://github.com/ibracardozo7" target="_blank" >
+                    <div className={style.botonFooter} ><i className="fa-brands fa-github"></i></div>
+                </a>
+                <a href="https://www.linkedin.com/in/ibrahim-cardozo-26a200248/" target="_blank" >
+                    <div className={style.botonFooter} ><i className="fa-brands fa-linkedin"></i></div>
+                </a>
                 <h4 className={style.footerName}>© Xavier Ibrahim Cardozo 2022.</h4>
             </div>
         </div>
